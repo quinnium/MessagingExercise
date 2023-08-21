@@ -12,19 +12,12 @@
 		02BDD5852A938F8D00B5A40B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02BDD5842A938F8D00B5A40B /* Assets.xcassets */; };
 		02BDD5882A938F8D00B5A40B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02BDD5872A938F8D00B5A40B /* Preview Assets.xcassets */; };
 		02BDD5922A938F8D00B5A40B /* MessagingExerciseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BDD5912A938F8D00B5A40B /* MessagingExerciseTests.swift */; };
-		02BDD59C2A938F8D00B5A40B /* MessagingExerciseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BDD59B2A938F8D00B5A40B /* MessagingExerciseUITests.swift */; };
-		02BDD59E2A938F8D00B5A40B /* MessagingExerciseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BDD59D2A938F8D00B5A40B /* MessagingExerciseUITestsLaunchTests.swift */; };
+		02BDD5AC2A9392D500B5A40B /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 02BDD5AB2A9392D500B5A40B /* Realm */; };
+		02BDD5AE2A9392D500B5A40B /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 02BDD5AD2A9392D500B5A40B /* RealmSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		02BDD58E2A938F8D00B5A40B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 02BDD5752A938F8C00B5A40B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 02BDD57C2A938F8C00B5A40B;
-			remoteInfo = MessagingExercise;
-		};
-		02BDD5982A938F8D00B5A40B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 02BDD5752A938F8C00B5A40B /* Project object */;
 			proxyType = 1;
@@ -41,9 +34,6 @@
 		02BDD5872A938F8D00B5A40B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		02BDD58D2A938F8D00B5A40B /* MessagingExerciseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessagingExerciseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		02BDD5912A938F8D00B5A40B /* MessagingExerciseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingExerciseTests.swift; sourceTree = "<group>"; };
-		02BDD5972A938F8D00B5A40B /* MessagingExerciseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessagingExerciseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		02BDD59B2A938F8D00B5A40B /* MessagingExerciseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingExerciseUITests.swift; sourceTree = "<group>"; };
-		02BDD59D2A938F8D00B5A40B /* MessagingExerciseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingExerciseUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,17 +41,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02BDD5AE2A9392D500B5A40B /* RealmSwift in Frameworks */,
+				02BDD5AC2A9392D500B5A40B /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		02BDD58A2A938F8D00B5A40B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		02BDD5942A938F8D00B5A40B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,7 +61,6 @@
 			children = (
 				02BDD57F2A938F8C00B5A40B /* MessagingExercise */,
 				02BDD5902A938F8D00B5A40B /* MessagingExerciseTests */,
-				02BDD59A2A938F8D00B5A40B /* MessagingExerciseUITests */,
 				02BDD57E2A938F8C00B5A40B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,7 +70,6 @@
 			children = (
 				02BDD57D2A938F8C00B5A40B /* MessagingExercise.app */,
 				02BDD58D2A938F8D00B5A40B /* MessagingExerciseTests.xctest */,
-				02BDD5972A938F8D00B5A40B /* MessagingExerciseUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,15 +101,6 @@
 			path = MessagingExerciseTests;
 			sourceTree = "<group>";
 		};
-		02BDD59A2A938F8D00B5A40B /* MessagingExerciseUITests */ = {
-			isa = PBXGroup;
-			children = (
-				02BDD59B2A938F8D00B5A40B /* MessagingExerciseUITests.swift */,
-				02BDD59D2A938F8D00B5A40B /* MessagingExerciseUITestsLaunchTests.swift */,
-			);
-			path = MessagingExerciseUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +117,10 @@
 			dependencies = (
 			);
 			name = MessagingExercise;
+			packageProductDependencies = (
+				02BDD5AB2A9392D500B5A40B /* Realm */,
+				02BDD5AD2A9392D500B5A40B /* RealmSwift */,
+			);
 			productName = MessagingExercise;
 			productReference = 02BDD57D2A938F8C00B5A40B /* MessagingExercise.app */;
 			productType = "com.apple.product-type.application";
@@ -165,24 +143,6 @@
 			productReference = 02BDD58D2A938F8D00B5A40B /* MessagingExerciseTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		02BDD5962A938F8D00B5A40B /* MessagingExerciseUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 02BDD5A72A938F8D00B5A40B /* Build configuration list for PBXNativeTarget "MessagingExerciseUITests" */;
-			buildPhases = (
-				02BDD5932A938F8D00B5A40B /* Sources */,
-				02BDD5942A938F8D00B5A40B /* Frameworks */,
-				02BDD5952A938F8D00B5A40B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				02BDD5992A938F8D00B5A40B /* PBXTargetDependency */,
-			);
-			name = MessagingExerciseUITests;
-			productName = MessagingExerciseUITests;
-			productReference = 02BDD5972A938F8D00B5A40B /* MessagingExerciseUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -200,10 +160,6 @@
 						CreatedOnToolsVersion = 14.3.1;
 						TestTargetID = 02BDD57C2A938F8C00B5A40B;
 					};
-					02BDD5962A938F8D00B5A40B = {
-						CreatedOnToolsVersion = 14.3.1;
-						TestTargetID = 02BDD57C2A938F8C00B5A40B;
-					};
 				};
 			};
 			buildConfigurationList = 02BDD5782A938F8C00B5A40B /* Build configuration list for PBXProject "MessagingExercise" */;
@@ -215,13 +171,15 @@
 				Base,
 			);
 			mainGroup = 02BDD5742A938F8C00B5A40B;
+			packageReferences = (
+				02BDD5AA2A9392D500B5A40B /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 02BDD57E2A938F8C00B5A40B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				02BDD57C2A938F8C00B5A40B /* MessagingExercise */,
 				02BDD58C2A938F8D00B5A40B /* MessagingExerciseTests */,
-				02BDD5962A938F8D00B5A40B /* MessagingExerciseUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -237,13 +195,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		02BDD58B2A938F8D00B5A40B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		02BDD5952A938F8D00B5A40B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -270,15 +221,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		02BDD5932A938F8D00B5A40B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				02BDD59C2A938F8D00B5A40B /* MessagingExerciseUITests.swift in Sources */,
-				02BDD59E2A938F8D00B5A40B /* MessagingExerciseUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -286,11 +228,6 @@
 			isa = PBXTargetDependency;
 			target = 02BDD57C2A938F8C00B5A40B /* MessagingExercise */;
 			targetProxy = 02BDD58E2A938F8D00B5A40B /* PBXContainerItemProxy */;
-		};
-		02BDD5992A938F8D00B5A40B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 02BDD57C2A938F8C00B5A40B /* MessagingExercise */;
-			targetProxy = 02BDD5982A938F8D00B5A40B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -503,40 +440,6 @@
 			};
 			name = Release;
 		};
-		02BDD5A82A938F8D00B5A40B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.quinnium.MessagingExerciseUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MessagingExercise;
-			};
-			name = Debug;
-		};
-		02BDD5A92A938F8D00B5A40B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.quinnium.MessagingExerciseUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MessagingExercise;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -567,16 +470,31 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		02BDD5A72A938F8D00B5A40B /* Build configuration list for PBXNativeTarget "MessagingExerciseUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				02BDD5A82A938F8D00B5A40B /* Debug */,
-				02BDD5A92A938F8D00B5A40B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		02BDD5AA2A9392D500B5A40B /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				kind = exactVersion;
+				version = 10.42.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		02BDD5AB2A9392D500B5A40B /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02BDD5AA2A9392D500B5A40B /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		02BDD5AD2A9392D500B5A40B /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02BDD5AA2A9392D500B5A40B /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 02BDD5752A938F8C00B5A40B /* Project object */;
 }
