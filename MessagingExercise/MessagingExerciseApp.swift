@@ -11,7 +11,10 @@ import SwiftUI
 struct MessagingExerciseApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LandingView()
+                .onAppear {
+                    DatabaseManager().printRealmFilePath()
+                }
         }
     }
 }
