@@ -19,12 +19,17 @@ final class DatabaseManager {
     var notificationToken: NotificationToken?
     var delegate: DatabaseResultsChangedProtocol?
     
-    init() {
-        var configuration = Realm.Configuration.defaultConfiguration
-        if configuration.fileURL != nil {
-            configuration.fileURL!.deleteLastPathComponent()
-            configuration.fileURL!.append(path: configurationPathName)
-            configuration.fileURL!.appendPathExtension("realm")
+    init(forTesting: Bool = false) {
+        var configuration: Realm.Configuration
+        if forTesting {
+            configuration = Realm.Configuration(inMemoryIdentifier: "MEQuinnium")
+        } else {
+            configuration = Realm.Configuration.defaultConfiguration
+            if configuration.fileURL != nil {
+                configuration.fileURL!.deleteLastPathComponent()
+                configuration.fileURL!.append(path: configurationPathName)
+                configuration.fileURL!.appendPathExtension("realm")
+            }
         }
         do {
             realm = try Realm(configuration: configuration)
@@ -43,15 +48,21 @@ final class DatabaseManager {
         print("Log: Realm database at: \(path?.description ?? "not found")")
     }
     
-    func fetchProfile(withId id: ObjectId) -> Profile? {
-        return realm.object(ofType: Profile.self, forPrimaryKey: id)
-    }
-    
     func addProfile(name: String, imageURLString: String, bioText: String) {
         realm.beginWrite()
         let profile = Profile(name: name, profileImageURLString: imageURLString, bioText: bioText)
         realm.add(profile)
         commitChanges()
+    }
+    
+    func fetchProfileForName(name: String) -> Profile? {
+        let results = realm.objects(Profile.self).filter { $0.name == name }
+        guard results.count > 0 else { return nil }
+        return results.first!
+    }
+    
+    func fetchProfile(withId id: ObjectId) -> Profile? {
+        return realm.object(ofType: Profile.self, forPrimaryKey: id)
     }
     
     func addMessage(from sender: ObjectId, to recipient: ObjectId, messageText: String, isSystemMessage: Bool, dateSent: Date = Date()) {
@@ -60,14 +71,6 @@ final class DatabaseManager {
         realm.add(message)
         commitChanges()
     }
-    
-//    func getMessagesBetween(profileOne: ObjectId, profileTwo: ObjectId) -> Results<Message> {
-//        let messages = realm.objects(Message.self).where {
-//            ($0.from == profileOne && $0.to == profileTwo && $0.isSystemMessage == false) ||
-//            ($0.from == profileTwo && $0.to == profileOne && $0.isSystemMessage == false) ||
-//            ($0.from == profileTwo && $0.to == profileOne && $0.isSystemMessage == true) }
-//        return messages.sorted(byKeyPath: "dateSent", ascending: true)
-//    }
     
     func getMessagesBetween(profileOne: ObjectId, profileTwo: ObjectId) -> Results<Message> {
         let messages = realm.objects(Message.self).where {
@@ -88,12 +91,6 @@ final class DatabaseManager {
             }
         }
         return messages.sorted(byKeyPath: "dateSent", ascending: true)
-    }
-    
-    func fetchProfileForName(name: String) -> Profile? {
-        let results = realm.objects(Profile.self).filter { $0.name == name }
-        guard results.count > 0 else { return nil }
-        return results.first!
     }
     
     func deleteAllmessagesInMemory() {

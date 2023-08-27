@@ -12,12 +12,11 @@ final class ChatViewModel: ObservableObject {
     
     let user: Profile
     let friend: Profile
+    let databaseManager = DatabaseManager()
     @Published var messages: Results<Message>?
     
-    let databaseManager = DatabaseManager()
-    
     init(user: Profile, friend: Profile) {
-        self.user = user
+        self.user   = user
         self.friend = friend
         configureDelegate()
         fetchMessages()

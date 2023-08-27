@@ -13,7 +13,7 @@ final class MessagingHeaderViewModel: ObservableObject {
     let friend: Profile
     
     init(user: Profile, friend: Profile) {
-        self.user = user
+        self.user   = user
         self.friend = friend
     }
     

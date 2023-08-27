@@ -19,7 +19,7 @@ final class MessagingViewModel: ObservableObject {
     @Published var selectedSection: MessagingSectionOptions = .chat
     
     init(user: Profile, friend: Profile) {
-        self.user = user
+        self.user   = user
         self.friend = friend
     }
 }

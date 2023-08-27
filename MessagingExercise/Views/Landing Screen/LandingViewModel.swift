@@ -11,7 +11,7 @@ import RealmSwift
 final class LandingViewModel: ObservableObject {
     
     private let databaseManager = DatabaseManager()
-    private let mockingService = MockingService()
+    private let mockingService  = MockingService()
     
     @Published var profileOne: Profile?
     @Published var profileTwo: Profile?

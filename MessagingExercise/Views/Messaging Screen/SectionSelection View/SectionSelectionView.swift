@@ -9,7 +9,6 @@ import SwiftUI
 
 struct SectionSelectionView: View {
     
-    @StateObject var vm = SectionSelectionViewModel()
     @Binding var selectedSection: MessagingSectionOptions
     
     var body: some View {

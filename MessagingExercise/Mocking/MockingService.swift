@@ -14,9 +14,7 @@ struct MockingService {
     
     private let firstProfileName            = "Mittens"
     private let secondProfileName           = "Spot"
-//    private let firstProfileImageUrlString  = Bundle.main.url(forResource: "cat", withExtension: "png")?.absoluteString ?? ""
     private let firstProfileImageUrlString  = "https://dl.dropbox.com/scl/fi/hnl9zpr3ebv9u80asd4iw/cat.png?rlkey=mqpvks1xjlhtpei0mlh5nwqa2"
-//    private let secondProfileImageUrlString = Bundle.main.url(forResource: "dog", withExtension: "png")?.absoluteString ?? ""
     private let secondProfileImageUrlString = "https://dl.dropbox.com/scl/fi/t8njummatbuv35ucyjmue/dog.png?rlkey=ywsdn82ge5p9go7r6ulhkm51m"
     private let firstProfileBioText         = "Meow meow prrr meow prrr meow prrr meow prrr meow prrr meow prrr meow prrr meow prrr meow prrr meow prrr meow prrr"
     private let secondProfileBioText        = "Woof woofy woof woofy woof woofy woof woofy woof woofy woof woofy woof woofy woof woofy woof woofy woof woofy woof"
